@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="kupala_val",  # Package name
-    version="0.1.0",  # Start with a semantic version
+    name="kupala_val", 
+    version="0.2.0", 
     author="Maksim Kozyarchuk",
     author_email="maksim.kozyarchuk@gmail.com",
     description="Portfolio valuation, cashflow analysis, and risk assessment.",

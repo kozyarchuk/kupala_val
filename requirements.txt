@@ -1,1 +1,6 @@
-# Add your project dependencies here.
+pandas
+requests
+# Type checking
+mypy
+pandas-stubs
+types-requests
