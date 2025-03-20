@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 .pypirc
 scrap*.py
+publish_to_pypi.cmd
 
 # Distribution / packaging
 build/
