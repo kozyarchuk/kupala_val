@@ -7,8 +7,8 @@ import time
 from typing import Optional, Any
 from .portfolio_analysis import PortfolioAnalysis
 
-KUPALA_API_URL = 'https://gy3q1uyj68.execute-api.us-east-1.amazonaws.com/prod/value_portfolio'
-
+KUPALA_API_URL_TEST = 'https://gy3q1uyj68.execute-api.us-east-1.amazonaws.com/prod/value_portfolio'
+KUPALA_API_URL = 'https://w08z5ckqt9.execute-api.us-east-1.amazonaws.com/prod/value_portfolio'
 
 class KupalaVal:
     def __init__(self, api_key: str, vebose: bool = False):
