@@ -12,9 +12,15 @@ Kupala Val is a Python package that serves as an API wrapper around [Kupala-Nich
 
 ## Supported Instruments
 
-As of this release, only OIS Swaps referencing SOFR, ESTR, SONIA, CORRA, TONA, TIIE ON, SARON, and SORA, along with listed instruments available via the YFinance API, are supported. This list will expand over time. Since all valuations are performed through a remote API, updates to supported instruments will be seamless. Users do not need to modify their `kupala_val` installations to access new products as they become available.
+As of release 1.1 the following products are supported
+ * OIS Swaps referencing SOFR, ESTR, SONIA, CORRA, TONA, TIIE ON, SARON, and SORA
+ * FX Forwards using available OIS Curves for discounting, Support for FX Specific curves will be added over time
+ * Listed instruments available via the YFinance API
+ * Cash balances
 
-To see full list of supported products, please refer to valuations Page on [Kupala-Nich.com](https://kupala-nich.com).  To inquire about specific instrument support, please contact me at maksim.kozyarchuk@gmail.com
+This list will expand over time. Since all valuations are performed through a remote API, updates to supported instruments will be seamless. Users do not need to modify their `kupala_val` installations to access new products as they become available.  To see full list of supported products, please refer to valuations Page on [Kupala-Nich.com](https://kupala-nich.com).  
+
+To inquire about specific instrument support, please contact me at maksim.kozyarchuk@gmail.com
 
 ## Valuation Methodology
 
