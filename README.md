@@ -91,14 +91,17 @@ To obtain valuations for a portfolio of positions, please provide the following 
 | `symbol`             | **Required** *(for Listed and Cash)* | Currency code or ticker recognized by Yahoo Finance                                                                     |
 | `quantity`           | **Required** *(for Listed and Cash)* | Number of shares or cash amount. Treated as absolute value; use `direction` to indicate sign                            |
 | `cost`               | Optional *(for Listed)*            | Cost prices to subtract from market price when calculating NPV                                                          |
-| `template`           | **Required** *(for Swaps)*               | Can be `curve_name`, `upi`, `upi_underlier`, or `upi_fsin`. Refer to the template list for available templates          |
+| `template`           | **Required** *(for Swaps)*               | Can be `curve_name`, `upi`, `upi_underlier`, or `upi_fsin`. Refer to the template list for available templates        |
+| `currency_pair`      | **Required** *(for FX)*             | Currency pair in XXX/YYY format i.e EUR/USD, GBP/JPY...                                                               |
+| `traded_currency`    | **Required** *(for FX)*             | Traded FX Currency, linked with direction and notional                                                              |
 | `direction`          | **Required**                       | One of `Receive Fixed`, `Pay Fixed`, `Buy`, `Sell`                                                                       |
-| `notional`           | **Required**  *(for Swaps)*         | Principal amount                                                                                                        |
+| `notional`           | **Required**  *(for Swaps, FX)*    | Principal amount                                                                                                        |
 | `effective_date`     | Optional                           | If not provided, defaults to current day plus settlement day offset for the curve; format `YYYY-MM-DD`                  |
-| `maturity_date`      | **Required**   *(for Swaps)*         | Maturity date; can be expressed as tenor (e.g., `10Y`) or date (`YYYY-MM-DD`)                                           |
+| `maturity_date`      | **Required**   *(for Swaps, FX)*   | Maturity date; can be expressed as tenor (e.g., `10Y`) or date (`YYYY-MM-DD`)                                           |
 | `roll_period`        | Optional                           | Defaults from template if not provided                                                                                  |
 | `fixed_rate`         | **Required**  *(for Swaps)*        | Fixed rate as a percentage (0 to 100%); e.g., `4.06%`                                                                   |
-| `price_date`         | Optional                           | Valuation date in `YYYY-MM-DD` format                                                                                   |
+| `forward_rate`       | **Required**  *(for FX)*           | FX Forward Rate in convention of the currency pair                                                                     |
+| `price_date`         | Optional                           | Valuation date in `YYYY-MM-DD` format, or LATEST                                                                        |
 | `roll_type`          | Optional                           | Roll type; valid options: `Standard`, `IMM`, `EOM`                                                                      |
 | `stub_type`          | Optional                           | Stub type; valid options: `ShortInitial`, `ShortFinal`, `LongInitial`, `LongFinal`                                      |
 | `roll_conv`          | Optional                           | Roll convention; valid options: `Following`, `ModifiedFollowing`, `Preceding`, `ModifiedPreceding`, `Unadjusted`        |
